@@ -235,6 +235,27 @@ npm run dev
 
 ## 📸 Screenshots
 
+![Home Page](screenshots/1.home.png)
+
+![Register Page](screenshots/2.register.png)
+
+![Dashboard](screenshots/3.dashboard.png)
+
+![Dashboard Stats](screenshots/4.dashboard.png)
+
+![Create Task](screenshots/5.create-task.png)
+
+![Edit Task](screenshots/6.edit-task.png)
+
+![Mobile Responsive](screenshots/7.mobileReponsivnes.jpg)
+
+![Mobile Dashboard](screenshots/8.mobileReponsivness.jpg)
+
+![Mobile Task](screenshots/9.mobileResponsivnes.jpg)
+
+![Mobile Create Task](screenshots/10.mobileResponsivnes.jpg)
+
+
 ### Dashboard
 
 - Task Statistics

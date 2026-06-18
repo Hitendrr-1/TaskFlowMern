@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import API from "../services/api";
 import Navbar from "../components/Navbar";
 
 function Register() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,10 +28,27 @@ function Register() {
         formData
       );
 
-      alert(res.data.message);
-      console.log(res.data);
+      alert(
+        "🎉 Registration Successful! Please Login.."
+      );
+
+      setFormData({
+        name: "",
+        email: "",
+        password: "",
+      });
+
+      setTimeout(() => {
+        navigate("/", {
+          replace: true,
+        });
+      }, 1000);
+
     } catch (error) {
-      alert(error.response?.data?.message || "Error");
+      alert(
+        error.response?.data?.message ||
+        "Registration Failed"
+      );
     }
   };
 
@@ -44,30 +64,37 @@ function Register() {
             type="text"
             name="name"
             placeholder="Enter Name"
+            value={formData.name}
             onChange={handleChange}
+            required
           />
 
-          <br /><br />
+          <br />
+          <br />
 
           <input
             type="email"
             name="email"
-            placeholder="Email"
+            placeholder="Enter Email"
             value={formData.email}
             onChange={handleChange}
             required
           />
 
-          <br /><br />
+          <br />
+          <br />
 
           <input
             type="password"
             name="password"
             placeholder="Enter Password"
+            value={formData.password}
             onChange={handleChange}
+            required
           />
 
-          <br /><br />
+          <br />
+          <br />
 
           <button type="submit">
             Register
