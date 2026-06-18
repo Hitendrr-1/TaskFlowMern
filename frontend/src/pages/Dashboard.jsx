@@ -240,13 +240,13 @@ const [editId, setEditId] = useState(null);
                 }
               >
             <input
-            type="text"
-            name="title"
-            placeholder="Task Title"
-            value={taskData.title || ""}
-            onChange={handleChange}
-            required
-          />
+              type="text"
+              name="title"
+              placeholder="Task Title"
+              value={taskData.title || ""}
+              onChange={handleChange}
+              required
+            />
 
           <br />
           <br />
@@ -315,7 +315,7 @@ const [editId, setEditId] = useState(null);
           <input
             type="date"
             name="dueDate"
-            value={taskData.title || ""}
+            value={taskData.dueDate || ""}
             onChange={handleChange}
           />
 
